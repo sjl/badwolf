@@ -302,6 +302,14 @@ call HL('InterestingWord3', 'coal', 'taffy')
 " hi RedBar   term=reverse ctermfg=white ctermbg=red guifg=white guibg=#C50048
 
 " }}}
+" ShowMarks {{{
+
+call HL('ShowMarksHLl', 'tardis', 'blackgravel')
+call HL('ShowMarksHLu', 'tardis', 'blackgravel')
+call HL('ShowMarksHLo', 'tardis', 'blackgravel')
+call HL('ShowMarksHLm', 'tardis', 'blackgravel')
+
+" }}}
 
 " }}}
 " Filetype-specific {{{
