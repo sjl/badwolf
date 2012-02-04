@@ -49,48 +49,48 @@ let s:bwc = {}
 
 " The most basic of all our colors is a slightly tweaked version of the Molokai
 " Normal text.
-let s:bwc.plain = 'f8f6f2'
+let s:bwc.plain = ['f8f6f2', 15]
 
 " Pure and simple.
-let s:bwc.snow = 'ffffff'
-let s:bwc.coal = '000000'
+let s:bwc.snow = ['ffffff', 15]
+let s:bwc.coal = ['000000', 0]
 
 " All of the Gravel colors are based on a brown from Clouds Midnight.
-let s:bwc.brightgravel = 'd9cec3'
-let s:bwc.lightgravel  = '998f84'
-let s:bwc.gravel       = '857f78'
-let s:bwc.mediumgravel = '666462'
-let s:bwc.deepgravel   = '45413b'
-let s:bwc.deepergravel = '35322d'
-let s:bwc.darkgravel   = '242321'
-let s:bwc.blackgravel  = '1c1b1a'
+let s:bwc.brightgravel = ['d9cec3', 252]
+let s:bwc.lightgravel  = ['998f84', 245]
+let s:bwc.gravel       = ['857f78', 243]
+let s:bwc.mediumgravel = ['666462', 241]
+let s:bwc.deepgravel   = ['45413b', 238]
+let s:bwc.deepergravel = ['35322d', 236]
+let s:bwc.darkgravel   = ['242321', 235]
+let s:bwc.blackgravel  = ['1c1b1a', 233]
 
 " A color sampled from a highlight in a photo of a glass of Dale's Pale Ale on
 " my desk.
-let s:bwc.dalespale = 'fade3e'
+let s:bwc.dalespale = ['fade3e', 221]
 
 " A beautiful tan from Tomorrow Night.
-let s:bwc.dirtyblonde = 'f4cf86'
+let s:bwc.dirtyblonde = ['f4cf86', 222]
 
 " Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = 'ff2c4b'
+let s:bwc.taffy = ['ff2c4b', 197]
 
 " The star of the show comes straight from Made of Code.
-let s:bwc.tardis = '0a9dff'
+let s:bwc.tardis = ['0a9dff', 39]
 
 " This one's from Mustang, not Florida!
-let s:bwc.orange = 'ffa724'
+let s:bwc.orange = ['ffa724', 214]
 
 " A limier version of Mustang's horsefood, to ward off scurvy.
 " It actually turned out pretty close to Molokai's green.  Huh.
-let s:bwc.lime = 'a1e022'
+let s:bwc.lime = ['a1e022', 148]
 
 " Rose's dress in The Idiot's Lantern.
-let s:bwc.dress = 'ff99b3'
+let s:bwc.dress = ['ff99b3', 211]
 
 " Saturated gravel (originally from Clouds Midnight).
-let s:bwc.mud = 'ff6b40'
-let s:bwc.mud = 'b88853'
+let s:bwc.mud = ['ff6b40', 203]
+let s:bwc.mud = ['b88853', 137]
 
 " }}}
 " Highlighting Function {{{
@@ -101,26 +101,29 @@ function! HL(group, fg, ...)
 
     if strlen(a:fg)
         if a:fg == 'fg'
-            let histring .= 'guifg=fg '
+            let histring .= 'guifg=fg ctermfg=fg '
         else
-            let histring .= 'guifg=#' . get(s:bwc, a:fg, '') . ' '
+            let c = get(s:bwc, a:fg)
+            let histring .= 'guifg=#' . c[0] . ' ctermfg=' . c[1] . ' '
         endif
     endif
 
     if a:0 >= 1 && strlen(a:1)
         if a:1 == 'bg'
-            let histring .= 'guibg=bg '
+            let histring .= 'guibg=bg ctermbg=bg '
         else
-            let histring .= 'guibg=#' . get(s:bwc, a:1, '') . ' '
+            let c = get(s:bwc, a:1)
+            let histring .= 'guibg=#' . c[0] . ' ctermbg=' . c[1] . ' '
         endif
     endif
 
     if a:0 >= 2 && strlen(a:2)
-        let histring .= 'gui=' . a:2 . ' '
+        let histring .= 'gui=' . a:2 . ' cterm=' . a:2 . ' '
     endif
 
     if a:0 >= 3 && strlen(a:3)
-        let histring .= 'guisp=#' . get(s:bwc, a:3, '') . ' '
+        let c = get(s:bwc, a:3)
+        let histring .= 'guisp=#' . c[0] . ' '
     endif
 
     " echom histring
@@ -142,7 +145,7 @@ call HL('Folded', 'mediumgravel', 'bg', 'none')
 
 call HL('VertSplit', 'lightgravel', 'bg', 'none')
 
-call HL('CursorLine',   '', 'darkgravel')
+call HL('CursorLine',   '', 'darkgravel', 'none')
 call HL('CursorColumn', '', 'darkgravel')
 call HL('ColorColumn',  '', 'darkgravel')
 
@@ -377,6 +380,22 @@ call HL('javaDocParam', 'dalespale', '', '')
 " LessCSS {{{
 
 call HL('lessVariable', 'lime', '', 'none')
+
+" }}}
+" Mail {{{
+
+call HL('mailSubject', 'orange', '', 'bold')
+call HL('mailHeader', 'lightgravel', '', '')
+call HL('mailHeaderKey', 'lightgravel', '', '')
+call HL('mailHeaderEmail', 'snow', '', '')
+call HL('mailURL', 'mud', '', 'underline')
+call HL('mailSignature', 'gravel', '', 'none')
+
+call HL('mailQuoted1', 'gravel', '', 'none')
+call HL('mailQuoted2', 'dress', '', 'none')
+call HL('mailQuoted3', 'dirtyblonde', '', 'none')
+call HL('mailQuoted4', 'orange', '', 'none')
+call HL('mailQuoted5', 'lime', '', 'none')
 
 " }}}
 " Markdown {{{
