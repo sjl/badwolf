@@ -28,6 +28,8 @@
 "
 " }}}
 
+" Supporting code -------------------------------------------------------------
+
 " Preamble {{{
 
 set background=dark
@@ -41,7 +43,6 @@ endif
 let colors_name = "badwolf"
 
 " }}}
-
 " Palette {{{
 
 let s:bwc = {}
@@ -87,15 +88,11 @@ let s:bwc.lime = 'a1e022'
 " Rose's dress in The Idiot's Lantern.
 let s:bwc.dress = 'ff99b3'
 
-" A slightly brightened up version of Tomorrow Night's Aqua color.
-let s:bwc.plankton = '4fe0c3'
-
 " Saturated gravel (originally from Clouds Midnight).
 let s:bwc.mud = 'ff6b40'
-let s:bwc.mud = 'b38650'
+let s:bwc.mud = 'b88853'
 
 " }}}
-
 " Highlighting Function {{{
 function! HL(group, fg, ...)
     " Arguments: group, guifg, guibg, gui, guisp
@@ -132,7 +129,11 @@ function! HL(group, fg, ...)
 endfunction
 " }}}
 
-" General {{{
+" Actual colorscheme ----------------------------------------------------------
+
+" Vanilla Vim {{{
+
+" General/UI {{{
 
 call HL('Normal', 'plain', 'blackgravel')
 
@@ -157,13 +158,30 @@ call HL('Search',    'coal', 'dalespale', 'bold')
 call HL('IncSearch', 'coal', 'tardis',    'bold')
 
 call HL('SignColumn', '', 'blackgravel')
+call HL('FoldColumn', 'mediumgravel', 'blackgravel')
 
 call HL('Underlined', 'fg', '', 'underline')
 
 call HL('StatusLine',   'coal', 'tardis',     'bold')
 call HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
 
-" " }}}
+call HL('Directory', 'dirtyblonde', '', 'bold')
+
+call HL('Title', 'lime')
+
+call HL('ErrorMsg',   'taffy',       'bg', 'bold')
+call HL('MoreMsg',    'dalespale',   '',   'bold')
+call HL('ModeMsg',    'dirtyblonde', '',   'bold')
+call HL('Question',   'dirtyblonde', '',   'bold')
+call HL('WarningMsg', 'dress',       '',   'bold')
+
+" This is a ctags tag, not an HTML one.  'Something you can use c-] on'.
+call HL('Tag', '', '', 'bold')
+
+" hi IndentGuides                  guibg=#373737
+" hi WildMenu        guifg=#66D9EF guibg=#000000
+
+" }}}
 " Cursor {{{
 
 call HL('Cursor',  'coal', 'tardis', 'bold')
@@ -173,81 +191,123 @@ call HL('iCursor', 'coal', 'tardis', 'none')
 " }}}
 " Syntax highlighting {{{
 
+" Start with a simple base.
 call HL('Special', 'plain')
 
-call HL('Comment', 'gravel')
-call HL('Todo',    'snow', 'bg', 'bold')
+" Comments are slightly brighter than folds, to make 'headers' easier to see.
+call HL('Comment',        'gravel')
+call HL('Todo',           'snow', 'bg', 'bold')
+call HL('SpecialComment', 'snow', 'bg', 'bold')
 
-call HL('String',    'dirtyblonde')
-call HL('Statement', 'taffy', '', 'bold')
-call HL('Operator',  'taffy', '', 'none')
+" Strings are a nice, pale straw color.  Nothing too fancy.
+call HL('String', 'dirtyblonde')
 
+" Control flow stuff is taffy.
+call HL('Statement',   'taffy', '', 'bold')
+call HL('Keyword',     'taffy', '', 'bold')
+call HL('Conditional', 'taffy', '', 'bold')
+call HL('Operator',    'taffy', '', 'none')
+call HL('Label',       'taffy', '', 'none')
+call HL('Repeat',      'taffy', '', 'none')
+
+" Functions and variable declarations are orange, because plain looks weird.
 call HL('Identifier', 'orange', '', 'none')
+call HL('Function',   'orange', '', 'none')
 
-call HL('PreProc', 'lime', '', 'none')
+" Preprocessor stuff is lime, to make it pop.
+"
+" This includes imports in any given language, because they should usually be
+" grouped together at the beginning of a file.  If they're in the middle of some
+" other code they should stand out, because something tricky is
+" probably going on.
+call HL('PreProc',   'lime', '', 'none')
+call HL('Macro',     'lime', '', 'none')
+call HL('Define',    'lime', '', 'none')
+call HL('PreCondit', 'lime', '', 'bold')
 
-call HL('Constant',  'dress', '', 'bold')
-call HL('Character', 'dress', '', 'bold')
-call HL('Boolean',   'dress', '', 'bold')
+" Constants of all kinds are colored together.
+" I'm not really happy with the color yet...
+call HL('Constant',  'mud', '', 'bold')
+call HL('Character', 'mud', '', 'bold')
+call HL('Boolean',   'mud', '', 'bold')
 
 call HL('Number', 'mud', '', 'bold')
 call HL('Float',  'mud', '', 'bold')
 
+" Not sure what 'special character in a constant' means, but let's make it pop.
+call HL('SpecialChar', 'dress', '', 'bold')
+
 call HL('Type', 'dress', '', 'none')
+call HL('StorageClass', 'taffy', '', 'none')
+call HL('Structure', 'taffy', '', 'none')
+call HL('Typedef', 'taffy', '', 'bold')
 
-" hi Error           guifg=#960050 guibg=#1E0010
-" hi Keyword      guifg=#ff3853
-" hi Conditional     guifg=#F92672               gui=bold
-" hi Debug           guifg=#BCA3A3               gui=bold
-" hi Define          guifg=#66D9EF
-" hi Delimiter       guifg=#8F8F8F
-" hi Exception       guifg=#A6E22E               gui=bold
-" hi Function     guifg=#ffffff gui=bold ctermfg=255
-" hi Ignore          guifg=#808080 guibg=bg
-" hi Label           guifg=#E6DB74               gui=none
-" hi Macro           guifg=#C4BE89               gui=italic
-" hi PreCondit       guifg=#A6E22E               gui=bold
+" Make try/catch blocks stand out.
+call HL('Exception', 'lime', '', 'bold')
+
+" Misc
+call HL('Error',  'snow',   'taffy', 'bold')
+call HL('Debug',  'snow',   '',      'bold')
+call HL('Ignore', 'gravel', '',      '')
 
 " }}}
-" Interesting Words {{{
+" Completion Menu {{{
 
-" These are only used if you're me or have copied the <leader>hNUM mappings
-" from my Vimrc.
-hi InterestingWord1 guifg=#000000 guibg=#FFA700
-hi InterestingWord2 guifg=#000000 guibg=#53FF00
-hi InterestingWord3 guifg=#000000 guibg=#FF74F8
+call HL('Pmenu', 'plain', 'deepergravel')
+call HL('PmenuSel', 'coal', 'tardis', 'bold')
+call HL('PmenuSbar', '', 'deepergravel')
+call HL('PmenuThumb', 'brightgravel')
 
 " }}}
+" Diffs {{{
+
+call HL('DiffDelete', 'coal', 'dress')
+call HL('DiffAdd',    'coal', 'lime')
+call HL('DiffChange', '',     'darkgravel')
+call HL('DiffText',   'snow', 'deepergravel', 'bold')
+
+" }}}
+" Spelling {{{
+
+if has("spell")
+    call HL('SpellCap', 'dalespale', '', 'undercurl,bold', 'dalespale')
+    call HL('SpellBad', '', '', 'undercurl', 'dalespale')
+    call HL('SpellLocal', '', '', 'undercurl', 'dalespale')
+    call HL('SpellRare', '', '', 'undercurl', 'dalespale')
+endif
+
+" }}}
+
+" }}}
+" Plugins {{{
+
 " EasyMotion {{{
 
 call HL('EasyMotionTarget', 'tardis',     'bg', 'bold')
 call HL('EasyMotionShade',  'deepgravel', 'bg')
 
 " }}}
+" Interesting Words {{{
+
+" These are only used if you're me or have copied the <leader>hNUM mappings
+" from my Vimrc.
+call HL('InterestingWord1', 'coal', 'orange')
+call HL('InterestingWord2', 'coal', 'lime')
+call HL('InterestingWord3', 'coal', 'taffy')
+
+" }}}
+" Makegreen {{{
+
+" hi GreenBar term=reverse ctermfg=white ctermbg=green guifg=coal guibg=#9edf1c
+" hi RedBar   term=reverse ctermfg=white ctermbg=red guifg=white guibg=#C50048
+
+" }}}
+
+" }}}
 " Filetype-specific {{{
 
-" Python {{{
-hi def link pythonOperator Operator
-call HL('pythonBuiltin',    'dress')
-call HL('pythonEscape',     'dress')
-call HL('pythonException',  'lime', '', 'bold')
-call HL('pythonExceptions', 'lime', '', 'none')
-" }}}
-" HTML {{{
-call HL('htmlTagName', 'taffy', '', 'bold')
-call HL('htmlLink', 'lightgravel', '', 'underline')
-" hi htmlTag guifg=#947b5b
-" hi htmlTagName guifg=#ff3853 gui=bold
-" hi htmlArg guifg=#c0a7c7
-" hi htmlString guifg=#e6db74
-" }}}
-" Django Templates {{{
-call HL('djangoArgument', 'dirtyblonde', '',)
-call HL('djangoTagBlock', 'lime', '')
-" hi djangoStatement guifg=#ff3853 gui=bold
-" hi djangoVarBlock guifg=#f4cf86
-" }}}
 " Clojure {{{
+
 call HL('clojureSpecial', 'taffy', '', '')
 call HL('clojureDefn',    'taffy', '', '')
 call HL('clojureDefine',  'taffy', '', '')
@@ -262,8 +322,57 @@ call HL('clojureRepeat', 'dress', '', 'none')
 call HL('clojureParen0', 'lightgravel', '', 'none')
 
 call HL('clojureAnonArg', 'snow', '', 'bold')
+
+" }}}
+" CSS {{{
+
+call HL('cssColorProp', 'fg', '', 'none')
+call HL('cssBoxProp', 'fg', '', 'none')
+call HL('cssTextProp', 'fg', '', 'none')
+call HL('cssRenderProp', 'fg', '', 'none')
+call HL('cssGeneratedContentProp', 'fg', '', 'none')
+
+call HL('cssValueLength', 'mud', '', 'bold')
+call HL('cssColor', 'mud', '', 'bold')
+call HL('cssBraces', 'lightgravel', '', 'none')
+call HL('cssIdentifier', 'orange', '', 'bold')
+call HL('cssClassName', 'orange', '', 'none')
+
+" }}}
+" Django Templates {{{
+
+call HL('djangoArgument', 'dirtyblonde', '',)
+call HL('djangoTagBlock', 'lime', '')
+" hi djangoStatement guifg=#ff3853 gui=bold
+" hi djangoVarBlock guifg=#f4cf86
+
+" }}}
+" HTML {{{
+
+call HL('htmlTagName', 'taffy', '', 'bold')
+call HL('htmlLink', 'lightgravel', '', 'underline')
+" hi htmlTag guifg=#947b5b
+" hi htmlTagName guifg=#ff3853 gui=bold
+" hi htmlArg guifg=#c0a7c7
+" hi htmlString guifg=#e6db74
+
+" }}}
+" Java {{{
+
+call HL('javaClassDecl', 'taffy', '', 'bold')
+call HL('javaScopeDecl', 'taffy', '', 'bold')
+call HL('javaCommentTitle', 'gravel', '')
+call HL('javaDocTags', 'snow', '', 'none')
+call HL('javaDocParam', 'dalespale', '', '')
+
+" }}}
+" LessCSS {{{
+
+call HL('lessVariable', 'lime', '', 'none')
+
 " }}}
 " Markdown {{{
+
 call HL('markdownHeadingRule', 'lightgravel', '', 'bold')
 call HL('markdownHeadingDelimiter', 'lightgravel', '', 'bold')
 call HL('markdownOrderedListMarker', 'lightgravel', '', 'bold')
@@ -274,86 +383,37 @@ call HL('markdownH3', 'lime', '', 'none')
 call HL('markdownH4', 'lime', '', 'none')
 call HL('markdownH5', 'lime', '', 'none')
 call HL('markdownH6', 'lime', '', 'none')
-call HL('markdownLinkText', 'plankton', '', 'underline')
-call HL('markdownIdDeclaration', 'plankton')
-call HL('markdownAutomaticLink', 'plankton', '', 'bold')
-call HL('markdownUrl', 'plankton', '', 'bold')
+call HL('markdownLinkText', 'mud', '', 'underline')
+call HL('markdownIdDeclaration', 'mud')
+call HL('markdownAutomaticLink', 'mud', '', 'bold')
+call HL('markdownUrl', 'mud', '', 'bold')
 call HL('markdownUrldelimiter', 'lightgravel', '', 'bold')
 call HL('markdownLinkDelimiter', 'lightgravel', '', 'bold')
 call HL('markdownLinkTextDelimiter', 'lightgravel', '', 'bold')
-call HL('markdownCodeDelimiter', 'lightgravel', '', 'bold')
+call HL('markdownCodeDelimiter', 'dirtyblonde', '', 'bold')
 call HL('markdownCode', 'dirtyblonde', '', 'none')
+call HL('markdownCodeBlock', 'dirtyblonde', '', 'none')
+
+" }}}
+" Python {{{
+
+hi def link pythonOperator Operator
+call HL('pythonBuiltin',    'dress')
+call HL('pythonEscape',     'dress')
+call HL('pythonException',  'lime', '', 'bold')
+call HL('pythonExceptions', 'lime', '', 'none')
+
 " }}}
 " Vim {{{
+
 call HL('VimCommentTitle', 'lightgravel', '', 'bold')
 
 call HL('VimMapMod',    'dress', '', 'none')
 call HL('VimMapModKey', 'dress', '', 'none')
 call HL('VimNotation', 'dress', '', 'none')
 call HL('VimBracket', 'dress', '', 'none')
-" }}}
-
-" }}}
-" Completion Menu {{{
-
-call HL('Pmenu', 'plain', 'deepergravel')
-call HL('PmenuSel', 'coal', 'tardis', 'bold')
-call HL('PmenuSbar', '', 'deepergravel')
-call HL('PmenuThumb', 'brightgravel')
-
-" }}}
-" Makegreen {{{
-
-" hi GreenBar term=reverse ctermfg=white ctermbg=green guifg=coal guibg=#9edf1c
-" hi RedBar   term=reverse ctermfg=white ctermbg=red guifg=white guibg=#C50048
-
-" }}}
-" Diffs {{{
-
-" hi DiffAdd                       guibg=#1e4313
-" hi DiffChange      guifg=#89807D guibg=#322F2D
-" hi DiffDelete      guifg=#ff0088 guibg=#1B1E1F
-" hi DiffText                      guibg=#4A4340 gui=italic,bold
-
-" }}}
-" Spelling {{{
-
-if has("spell")
-    call HL('SpellCap', 'dalespale', '', 'undercurl,bold', 'dalespale')
-    call HL('SpellBad', '', '', 'undercurl', 'dalespale')
-    call HL('SpellLocal', '', '', 'undercurl', 'dalespale')
-    call HL('SpellRare', '', '', 'undercurl', 'dalespale')
-endif
 
 " }}}
 
-" Other {{{
-
-call HL('Directory', 'dirtyblonde', '', 'bold')
-
-call HL('Title', 'lime')
-
-" hi Repeat          guifg=#F92672               gui=bold
-" hi Question        guifg=#66D9EF
-" hi SpecialKey      guifg=#66D9EF               gui=italic
-" hi ErrorMsg        guifg=#F92672 guibg=#232526 gui=bold
-" hi ModeMsg         guifg=#E6DB74
-" hi MoreMsg         guifg=#E6DB74
-
-" hi IndentGuides                  guibg=#373737
-" hi SpecialChar     guifg=#F92672               gui=bold
-" hi SpecialChar     guifg=#F92672               gui=bold
-" hi SpecialComment  guifg=#465457               gui=bold
-" hi Special         guifg=#66D9EF guibg=bg      gui=italic
-" hi SpecialKey      guifg=#888A85               gui=italic
-" hi Statement       guifg=#F92672               gui=bold
-" hi StatusLine      guifg=#262626 guibg=fg
-" hi StatusLineNC    guifg=#262626 guibg=#080808
-" hi StorageClass    guifg=#FD971F               gui=italic
-" hi Structure       guifg=#66D9EF
-" hi Tag             guifg=#F92672               gui=italic
-" hi Title           guifg=#ef5939
-" hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
-" hi WildMenu        guifg=#66D9EF guibg=#000000
 " }}}
 
