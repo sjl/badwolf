@@ -295,6 +295,43 @@ endif
 " }}}
 " Plugins {{{
 
+" CtrlP {{{
+
+    " the message when no match is found
+    call HL('CtrlPNoEntries', 'snow', 'taffy', 'bold')
+
+    " the matched pattern
+    call HL('CtrlPMatch', 'orange', 'bg', 'none')
+
+    " the line prefix '>' in the match window
+    call HL('CtrlPLinePre', 'deepgravel', 'bg', 'none')
+
+    " the prompt’s base
+    call HL('CtrlPPrtBase', 'deepgravel', 'bg', 'none')
+
+    " the prompt’s text
+    call HL('CtrlPPrtText', 'plain', 'bg', 'none')
+
+    " the prompt’s cursor when moving over the text
+    call HL('CtrlPPrtCursor', 'coal', 'tardis', 'bold')
+
+    " 'prt' or 'win', also for 'regex'
+    call HL('CtrlPMode1', 'coal', 'tardis', 'bold')
+
+    " 'file' or 'path', also for the local working dir
+    call HL('CtrlPMode2', 'coal', 'tardis', 'bold')
+
+    " the scanning status
+    call HL('CtrlPStats', 'coal', 'tardis', 'bold')
+
+    " TODO: CtrlP extensions.
+    " CtrlPTabExtra  : the part of each line that’s not matched against (Comment)
+    " CtrlPqfLineCol : the line and column numbers in quickfix mode (|hl-Search|)
+    " CtrlPUndoT     : the elapsed time in undo mode (|hl-Directory|)
+    " CtrlPUndoBr    : the square brackets [] in undo mode (Comment)
+    " CtrlPUndoNr    : the undo number inside [] in undo mode (String)
+
+" }}}
 " EasyMotion {{{
 
 call HL('EasyMotionTarget', 'tardis',     'bg', 'bold')
