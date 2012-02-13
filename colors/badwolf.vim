@@ -71,7 +71,7 @@ let s:bwc.dalespale = ['fade3e', 221]
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
 " Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = ['ff2c4b', 197]
+let s:bwc.taffy = ['ff2c4b', 196]
 
 " The star of the show comes straight from Made of Code.
 let s:bwc.tardis = ['0a9dff', 39]
