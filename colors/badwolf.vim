@@ -50,7 +50,7 @@ let s:bwc.plain = ['f8f6f2', 15]
 
 " Pure and simple.
 let s:bwc.snow = ['ffffff', 15]
-let s:bwc.coal = ['000000', 0]
+let s:bwc.coal = ['000000', 16]
 
 " All of the Gravel colors are based on a brown from Clouds Midnight.
 let s:bwc.brightgravel   = ['d9cec3', 252]
