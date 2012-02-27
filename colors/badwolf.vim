@@ -73,6 +73,9 @@ let s:bwc.dirtyblonde = ['f4cf86', 222]
 " Delicious, chewy red from Made of Code for the poppiest highlights.
 let s:bwc.taffy = ['ff2c4b', 196]
 
+" Another chewy accent, but use sparingly!
+let s:bwc.saltwatertaffy = ['8cffba', 121]
+
 " The star of the show comes straight from Made of Code.
 let s:bwc.tardis = ['0a9dff', 39]
 
@@ -487,6 +490,21 @@ call HL('pythonEscape',     'dress')
 call HL('pythonException',  'lime', '', 'bold')
 call HL('pythonExceptions', 'lime', '', 'none')
 call HL('pythonDecorator',  'taffy', '', 'none')
+
+" }}}
+" SLIMV {{{
+
+" Rainbow parentheses
+call HL('hlLevel0', 'gravel')
+call HL('hlLevel1', 'orange')
+call HL('hlLevel2', 'saltwatertaffy')
+call HL('hlLevel3', 'dress')
+call HL('hlLevel4', 'coffee')
+call HL('hlLevel5', 'dirtyblonde')
+call HL('hlLevel6', 'orange')
+call HL('hlLevel7', 'saltwatertaffy')
+call HL('hlLevel8', 'dress')
+call HL('hlLevel9', 'coffee')
 
 " }}}
 " Vim {{{
