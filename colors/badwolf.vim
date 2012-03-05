@@ -486,9 +486,12 @@ call HL('markdownCodeBlock', 'dirtyblonde', '', 'none')
 
 hi def link pythonOperator Operator
 call HL('pythonBuiltin',    'dress')
+call HL('pythonBuiltinObj', 'dress')
+call HL('pythonBuiltinFunc', 'dress')
 call HL('pythonEscape',     'dress')
 call HL('pythonException',  'lime', '', 'bold')
 call HL('pythonExceptions', 'lime', '', 'none')
+call HL('pythonPrecondit', 'lime', '', 'none')
 call HL('pythonDecorator',  'taffy', '', 'none')
 
 " }}}
