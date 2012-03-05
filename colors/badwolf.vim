@@ -83,7 +83,7 @@ let s:bwc.tardis = ['0a9dff', 39]
 let s:bwc.orange = ['ffa724', 214]
 
 " A limier green from Getafe.
-let s:bwc.lime = ['aeee00', 148]
+let s:bwc.lime = ['aeee00', 154]
 
 " Rose's dress in The Idiot's Lantern.
 let s:bwc.dress = ['ff9eb8', 211]
