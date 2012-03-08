@@ -287,7 +287,7 @@ call HL('DiffText',   'snow', 'deepergravel', 'bold')
 " Spelling {{{
 
 if has("spell")
-    call HL('SpellCap', 'dalespale', '', 'undercurl,bold', 'dalespale')
+    call HL('SpellCap', 'dalespale', 'bg', 'undercurl,bold', 'dalespale')
     call HL('SpellBad', '', '', 'undercurl', 'dalespale')
     call HL('SpellLocal', '', '', 'undercurl', 'dalespale')
     call HL('SpellRare', '', '', 'undercurl', 'dalespale')
