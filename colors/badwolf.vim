@@ -43,6 +43,10 @@ endif
 
 let colors_name = "badwolf"
 
+if !exists("g:badwolf_html_link_underline") " {{{
+    let g:badwolf_html_link_underline = 1
+endif " }}}
+
 " }}}
 " Palette {{{
 
@@ -429,7 +433,12 @@ call HL('htmlSpecialTagName', 'coffee', '', 'bold')
 call HL('htmlArg', 'coffee', '', 'none')
 
 " Stuff inside an <a> tag
-call HL('htmlLink', 'lightgravel', '', 'underline')
+
+if g:badwolf_html_link_underline
+    call HL('htmlLink', 'lightgravel', '', 'underline')
+else
+    call HL('htmlLink', 'lightgravel', '', 'none')
+endif
 
 " }}}
 " Java {{{
