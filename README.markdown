@@ -33,6 +33,19 @@ what you're in for.
 
 ![Screenshot](http://i.imgur.com/J56VS.png)
 
+Configuration
+-------------
+
+There are a few settings you can use to tweak how Bad Wolf looks.
+
+### g:badwolf\_html\_link\_underline
+
+Determines whether text inside `a` tags in HTML files will be underlined.
+
+    " Turn off HTML link underlining
+    let g:badwolf_html_link_underline = 0
+
+Default: `1` (on)
 
 Contributing
 ------------
