@@ -42,6 +42,11 @@ let colors_name = "badwolf"
 " }}}
 " Palette {{{
 
+" **UPDATE** This color scheme only works on 256 colors.
+if !has("gui_running") && &t_Co != 88 && &t_Co != 256
+	finish
+endif
+
 let s:bwc = {}
 
 " The most basic of all our colors is a slightly tweaked version of the Molokai
