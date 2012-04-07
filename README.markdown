@@ -6,6 +6,8 @@ A color scheme for Vim, pieced together by [Steve Losh](http://stevelosh.com/).
 There's still quite a lot of room for improvement (particularly in HTML) so feel
 free to send me ideas through the [issue tracker][] or pull requests.
 
+It's MIT/X11 licensed, so feel free to hack it apart if you like.
+
 **If you're going to send a pull request that you want me to merge, please post
 a comment in it with before/after screenshots!**
 
