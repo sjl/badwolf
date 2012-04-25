@@ -513,14 +513,16 @@ call s:HL('markdownCodeBlock', 'dirtyblonde', '', 'none')
 " Python {{{
 
 hi def link pythonOperator Operator
-call s:HL('pythonBuiltin',    'dress')
-call s:HL('pythonBuiltinObj', 'dress')
+call s:HL('pythonBuiltin',     'dress')
+call s:HL('pythonBuiltinObj',  'dress')
 call s:HL('pythonBuiltinFunc', 'dress')
-call s:HL('pythonEscape',     'dress')
-call s:HL('pythonException',  'lime', '', 'bold')
-call s:HL('pythonExceptions', 'lime', '', 'none')
-call s:HL('pythonPrecondit', 'lime', '', 'none')
-call s:HL('pythonDecorator',  'taffy', '', 'none')
+call s:HL('pythonEscape',      'dress')
+call s:HL('pythonException',   'lime', '', 'bold')
+call s:HL('pythonExceptions',  'lime', '', 'none')
+call s:HL('pythonPrecondit',   'lime', '', 'none')
+call s:HL('pythonDecorator',   'taffy', '', 'none')
+call s:HL('pythonRun',         'gravel', '', 'bold')
+call s:HL('pythonCoding',      'gravel', '', 'bold')
 
 " }}}
 " SLIMV {{{
