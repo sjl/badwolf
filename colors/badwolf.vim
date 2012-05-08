@@ -441,6 +441,7 @@ call s:HL('htmlEndTag', 'darkroast', 'bg', 'none')
 " Tag names
 call s:HL('htmlTagName',        'coffee', '', 'bold')
 call s:HL('htmlSpecialTagName', 'coffee', '', 'bold')
+call s:HL('htmlSpecialChar',    'lime',   '', 'none')
 
 " Attributes
 call s:HL('htmlArg', 'coffee', '', 'none')
