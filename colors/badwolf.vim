@@ -511,6 +511,11 @@ call s:HL('markdownCode', 'dirtyblonde', '', 'none')
 call s:HL('markdownCodeBlock', 'dirtyblonde', '', 'none')
 
 " }}}
+" MySQL {{{
+
+call s:HL('mysqlSpecial', 'dress', '', 'bold')
+
+" }}}
 " Python {{{
 
 hi def link pythonOperator Operator
