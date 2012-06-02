@@ -49,6 +49,15 @@ Determines whether text inside `a` tags in HTML files will be underlined.
 
 Default: `1` (on)
 
+### g:badwolf\_css\_props\_highlight
+
+Determines whether CSS properties should be highlighted.
+
+    " Turn on CSS properties highlighting
+    let g:badwolf_css_props_highlight = 1
+
+Default: `0` (off)
+
 Contributing
 ------------
 
