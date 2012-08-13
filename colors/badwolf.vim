@@ -488,7 +488,10 @@ call s:HL('texMathZoneE', 'orange', '', 'none')
 call s:HL('texMath', 'orange', '', 'none')
 call s:HL('texMathMatcher', 'orange', '', 'none')
 call s:HL('texRefLabel', 'dirtyblonde', '', 'none')
-call s:HL('texRefZone', 'dalespale', '', 'none')
+call s:HL('texRefZone', 'lime', '', 'none')
+call s:HL('texComment', 'darkroast', '', 'none')
+call s:HL('texDelimiter', 'orange', '', 'none')
+call s:HL('texZone', 'brightgravel', '', 'none')
 " }}}
 " LessCSS {{{
 
