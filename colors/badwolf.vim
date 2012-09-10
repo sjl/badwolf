@@ -242,7 +242,6 @@ call s:HL('Repeat',      'taffy', '', 'none')
 " Functions and variable declarations are orange, because plain looks weird.
 call s:HL('Identifier', 'orange', '', 'none')
 call s:HL('Function',   'orange', '', 'none')
-call s:HL('Delimiter',   'orange', '', 'none')
 
 " Preprocessor stuff is lime, to make it pop.
 "
@@ -485,6 +484,8 @@ call s:HL('texMathZoneB', 'orange', '', 'none')
 call s:HL('texMathZoneC', 'orange', '', 'none')
 call s:HL('texMathZoneD', 'orange', '', 'none')
 call s:HL('texMathZoneE', 'orange', '', 'none')
+call s:HL('texMathZoneV', 'orange', '', 'none')
+call s:HL('texMathZoneX', 'orange', '', 'none')
 call s:HL('texMath', 'orange', '', 'none')
 call s:HL('texMathMatcher', 'orange', '', 'none')
 call s:HL('texRefLabel', 'dirtyblonde', '', 'none')
