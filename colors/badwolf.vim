@@ -476,6 +476,24 @@ call s:HL('javaDocTags', 'snow', '', 'none')
 call s:HL('javaDocParam', 'dalespale', '', '')
 
 " }}}
+" LaTeX {{{
+call s:HL('texStatement', 'tardis', '', 'none')
+call s:HL('texMathZoneX', 'orange', '', 'none')
+call s:HL('texMathZoneA', 'orange', '', 'none')
+call s:HL('texMathZoneB', 'orange', '', 'none')
+call s:HL('texMathZoneC', 'orange', '', 'none')
+call s:HL('texMathZoneD', 'orange', '', 'none')
+call s:HL('texMathZoneE', 'orange', '', 'none')
+call s:HL('texMathZoneV', 'orange', '', 'none')
+call s:HL('texMathZoneX', 'orange', '', 'none')
+call s:HL('texMath', 'orange', '', 'none')
+call s:HL('texMathMatcher', 'orange', '', 'none')
+call s:HL('texRefLabel', 'dirtyblonde', '', 'none')
+call s:HL('texRefZone', 'lime', '', 'none')
+call s:HL('texComment', 'darkroast', '', 'none')
+call s:HL('texDelimiter', 'orange', '', 'none')
+call s:HL('texZone', 'brightgravel', '', 'none')
+" }}}
 " LessCSS {{{
 
 call s:HL('lessVariable', 'lime', '', 'none')
