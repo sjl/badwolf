@@ -477,6 +477,7 @@ call s:HL('javaDocParam', 'dalespale', '', '')
 
 " }}}
 " LaTeX {{{
+
 call s:HL('texStatement', 'tardis', '', 'none')
 call s:HL('texMathZoneX', 'orange', '', 'none')
 call s:HL('texMathZoneA', 'orange', '', 'none')
@@ -493,6 +494,14 @@ call s:HL('texRefZone', 'lime', '', 'none')
 call s:HL('texComment', 'darkroast', '', 'none')
 call s:HL('texDelimiter', 'orange', '', 'none')
 call s:HL('texZone', 'brightgravel', '', 'none')
+
+augroup badwolf_tex
+    au!
+
+    au BufRead,BufNewFile *.tex syn region texMathZoneV start="\\(" end="\\)\|%stopzone\>" keepend contains=@texMathZoneGroup
+    au BufRead,BufNewFile *.tex syn region texMathZoneX start="\$" skip="\\\\\|\\\$" end="\$\|%stopzone\>" keepend contains=@texMathZoneGroup
+augroup END
+
 " }}}
 " LessCSS {{{
 
