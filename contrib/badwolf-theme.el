@@ -33,12 +33,16 @@
   (custom-theme-set-faces
    'badwolf
    `(default ((t (:inherit nil :foreground ,bwc-plain :background ,bwc-blackestgravel))))
-   ;;`(cursor ((t (:background ,bwc-tardis))))
-   `(region ((t (:foreground nil :background ,bwc-darkgravel ))))
+   `(cursor ((t (:background ,bwc-tardis))))
+   `(region ((t (:foreground nil :background ,bwc-mediumgravel ))))
    `(fringe ((t (:background ,bwc-blackestgravel))))
 
-   `(highlight ((t (:background ,bwc-dalespale))))
-   `(hl-line ((t (:foreground nil :background ,bwc-darkgravel))))
+   `(minibuffer-prompt ((t (:foreground ,bwc-lime))))
+   `(link ((t (:foreground ,bwc-lightgravel :underline t))))
+   `(link-visited ((t (:inherit link :foreground ,bwc-orange))))
+
+   `(highlight ((t (:foreground ,bwc-coal :background ,bwc-dalespale))))
+   `(hl-line ((t (:inherit nil :background ,bwc-darkgravel))))
 
    `(linum ((t (:foreground ,bwc-mediumgravel))))
 
@@ -77,6 +81,18 @@
    `(rainbow-delimiters-depth-10-face ((t (:foreground ,bwc-coffee))))
    `(rainbow-delimiters-depth-11-face ((t (:foreground ,bwc-dirtyblonde))))
 
-   )))
+
+   ))
+
+    (custom-set-faces
+     `(ein:cell-input-area ((t (:background ,bwc-blackestgravel :inherit nil))))
+     `(ein:cell-input-prompt ((t (:foreground ,bwc-orange :background nil :inherit nil))))
+     `(ein:cell-output-prompt ((t (:foreground ,bwc-taffy :background nil :inherit nil))))
+     '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
+     )
+
+
+    (font-lock-add-keywords 'python-mode `(("\\<\\(import\\||from\\|except\\|finally\\|try\\|from\\|\\)\\>" 1 '(:foreground ,bwc-lime ) t)))
+  )
 
 (provide-theme 'badwolf)
