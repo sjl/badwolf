@@ -82,6 +82,7 @@
    `(rainbow-delimiters-depth-11-face ((t (:foreground ,bwc-dirtyblonde))))
 
 
+
    ))
 
     (custom-set-faces
@@ -89,6 +90,12 @@
      `(ein:cell-input-prompt ((t (:foreground ,bwc-orange :background nil :inherit nil))))
      `(ein:cell-output-prompt ((t (:foreground ,bwc-taffy :background nil :inherit nil))))
      '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
+
+     `(ac-candidate-face ((t (:background ,bwc-lightgravel))))
+     `(ac-selection-face ((t (:foreground ,bwc-coal :background ,bwc-orange))))
+
+      `(flymake-errline ((t (:background ,bwc-taffy ))))
+      `(flymake-warnline ((t (:background ,bwc-dress ))))
      )
 
 
