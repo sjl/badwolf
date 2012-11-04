@@ -171,9 +171,9 @@ call s:HL('CursorLine',   '', 'darkgravel', 'none')
 call s:HL('CursorColumn', '', 'darkgravel')
 call s:HL('ColorColumn',  '', 'darkgravel')
 
-call s:HL('TabLine', 'plain', 'blackgravel', 'none')
-call s:HL('TabLineFill', 'plain', 'blackgravel', 'none')
-call s:HL('TabLineSel', 'coal', 'mediumgravel', 'none')
+call s:HL('TabLine',     'plain', s:gutter, 'none')
+call s:HL('TabLineSel',  'coal',  'mediumgravel', 'bold')
+call s:HL('TabLineFill', 'plain', s:gutter, 'none')
 
 call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
