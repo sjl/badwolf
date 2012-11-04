@@ -154,6 +154,22 @@ else
     let s:gutter = 'blackgravel'
 endif
 
+if exists('g:badwolf_tabline')
+    if g:badwolf_tabline == 0
+        let s:tabline = 'blackestgravel'
+    elseif  g:badwolf_tabline == 1
+        let s:tabline = 'blackgravel'
+    elseif  g:badwolf_tabline == 2
+        let s:tabline = 'darkgravel'
+    elseif  g:badwolf_tabline == 3
+        let s:tabline = 'deepgravel'
+    else
+        let s:tabline = 'blackestgravel'
+    endif
+else
+    let s:tabline = 'blackgravel'
+endif
+
 " }}}
 
 " Actual colorscheme ----------------------------------------------------------
@@ -171,9 +187,9 @@ call s:HL('CursorLine',   '', 'darkgravel', 'none')
 call s:HL('CursorColumn', '', 'darkgravel')
 call s:HL('ColorColumn',  '', 'darkgravel')
 
-call s:HL('TabLine', 'plain', 'blackgravel', 'none')
-call s:HL('TabLineFill', 'plain', 'blackgravel', 'none')
-call s:HL('TabLineSel', 'coal', 'mediumgravel', 'none')
+call s:HL('TabLine', 'plain', s:tabline, 'none')
+call s:HL('TabLineFill', 'plain', s:tabline, 'none')
+call s:HL('TabLineSel', 'coal', 'tardis', 'none')
 
 call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
