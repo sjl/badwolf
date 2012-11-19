@@ -379,7 +379,11 @@ call s:HL('EasyMotionShade',  'deepgravel', 'bg')
 " from my Vimrc.
 call s:HL('InterestingWord1', 'coal', 'orange')
 call s:HL('InterestingWord2', 'coal', 'lime')
-call s:HL('InterestingWord3', 'coal', 'taffy')
+call s:HL('InterestingWord3', 'coal', 'saltwatertaffy')
+call s:HL('InterestingWord4', 'coal', 'toffee')
+call s:HL('InterestingWord5', 'coal', 'dress')
+call s:HL('InterestingWord6', 'coal', 'taffy')
+
 
 " }}}
 " Makegreen {{{
