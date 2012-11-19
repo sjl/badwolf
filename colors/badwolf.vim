@@ -528,6 +528,12 @@ augroup END
 call s:HL('lessVariable', 'lime', '', 'none')
 
 " }}}
+" Lispyscript {{{
+
+call s:HL('lispyscriptDefMacro', 'lime', '', '')
+call s:HL('lispyscriptRepeat', 'dress', '', 'none')
+
+" }}}
 " Mail {{{
 
 call s:HL('mailSubject', 'orange', '', 'bold')
