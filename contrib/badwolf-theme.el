@@ -18,7 +18,8 @@
 
     (bwc-dalespale "#fade3e")
     (bwc-dirtyblonde "#f4cf86")
-    (bwc-taffy "#ff2c4b")
+    ; (bwc-taffy "#ff2c4b")
+    (bwc-taffy "#ff0208")
     (bwc-saltwatertaffy "#8cffba")
     (bwc-tardis "#0a9dff")
     (bwc-orange "#ffa724")
@@ -80,6 +81,8 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,bwc-dress))))
    `(rainbow-delimiters-depth-10-face ((t (:foreground ,bwc-coffee))))
    `(rainbow-delimiters-depth-11-face ((t (:foreground ,bwc-dirtyblonde))))
+   `(rainbow-delimiters-unmatched-face ((t (:foreground "red"))))
+
 
 
 
@@ -94,8 +97,8 @@
      `(ac-candidate-face ((t (:background ,bwc-lightgravel))))
      `(ac-selection-face ((t (:foreground ,bwc-coal :background ,bwc-orange))))
 
-      `(flymake-errline ((t (:background ,bwc-taffy ))))
-      `(flymake-warnline ((t (:background ,bwc-dress ))))
+      `(flymake-errline ((t (:background nil :underline ,bwc-taffy ))))
+      `(flymake-warnline ((t (:background nil :underline ,bwc-dress ))))
      )
 
 
