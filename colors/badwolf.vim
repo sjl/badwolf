@@ -211,7 +211,7 @@ call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
 call s:HL('Title', 'lime')
 
-call s:HL('ErrorMsg',   'taffy',       'bg', 'bold')
+call s:HL('ErrorMsg',   'taffy',       '', 'bold')
 call s:HL('MoreMsg',    'dalespale',   '',   'bold')
 call s:HL('ModeMsg',    'dirtyblonde', '',   'bold')
 call s:HL('Question',   'dirtyblonde', '',   'bold')
