@@ -204,8 +204,8 @@ call s:HL('IncSearch', 'coal', 'tardis',    'bold')
 
 call s:HL('Underlined', 'fg', '', 'underline')
 
-call s:HL('StatusLine',   'coal', 'tardis',     'bold')
-call s:HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
+call s:HL('StatusLine',   'lime', 'darkgravel',     'bold')
+call s:HL('StatusLineNC', 'snow', 'darkgravel', 'bold')
 
 call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
