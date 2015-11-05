@@ -75,6 +75,17 @@ let s:bwc.darkgravel     = ['242321', 235]
 let s:bwc.blackgravel    = ['1c1b1a', 233]
 let s:bwc.blackestgravel = ['141413', 232]
 
+" For diff
+let s:bwc.DiffAdd     = ['005f00', 22]
+let s:bwc.DiffAdded   = ['005f00', 22]
+let s:bwc.DiffChange  = ['5f0000', 52]
+let s:bwc.DiffDelete  = ['870000', 88]
+let s:bwc.DiffRemoved = ['870000', 88]
+let s:bwc.DiffText    = ['df0000', 160]
+let s:bwc.DiffFile    = ['00ff5f', 47]
+let s:bwc.DiffNewFile = ['ff00af', 199]
+let s:bwc.DiffLine    = ['af00ff', 129]
+
 " A color sampled from a highlight in a photo of a glass of Dale's Pale Ale on
 " my desk.
 let s:bwc.dalespale = ['fade3e', 221]
@@ -310,10 +321,10 @@ call s:HL('PmenuThumb', 'brightgravel')
 " }}}
 " Diffs {{{
 
-call s:HL('DiffDelete', 'coal', 'coal')
-call s:HL('DiffAdd',    '',     'deepergravel')
-call s:HL('DiffChange', '',     'darkgravel')
-call s:HL('DiffText',   'snow', 'deepergravel', 'bold')
+call s:HL('DiffDelete', 'DiffDelete', '')
+call s:HL('DiffAdd',    'DiffAdd', '')
+call s:HL('DiffChange', 'DiffChange', '')
+call s:HL('DiffText',   'DiffText', '')
 
 " }}}
 " Spelling {{{
@@ -470,12 +481,12 @@ call s:HL('cssClassName', 'orange', '', 'none')
 
 call s:HL('gitDiff', 'lightgravel', '',)
 
-call s:HL('diffRemoved', 'dress', '',)
-call s:HL('diffAdded', 'lime', '',)
-call s:HL('diffFile', 'coal', 'taffy', 'bold')
-call s:HL('diffNewFile', 'coal', 'taffy', 'bold')
+call s:HL('diffRemoved', 'DiffRemoved', '')
+call s:HL('diffAdded',   'DiffAdded', '')
+call s:HL('diffFile',    'DiffFile', '')
+call s:HL('diffNewFile', 'DiffNewFile', '')
 
-call s:HL('diffLine', 'coal', 'orange', 'bold')
+call s:HL('diffLine', 'DiffLine', '')
 call s:HL('diffSubname', 'orange', '', 'none')
 
 " }}}
