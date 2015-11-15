@@ -41,7 +41,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "badwolf"
+let g:colors_name = "badwolf"
 
 if !exists("g:badwolf_html_link_underline") " {{{
     let g:badwolf_html_link_underline = 1
