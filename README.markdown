@@ -1,6 +1,8 @@
 Bad Wolf
 ========
 
+[![Join the chat at https://gitter.im/sjl/badwolf](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sjl/badwolf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A color scheme for Vim, pieced together by [Steve Losh](http://stevelosh.com/).
 
 There's still quite a lot of room for improvement (particularly in HTML) so feel
