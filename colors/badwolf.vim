@@ -443,6 +443,13 @@ call s:HL('clojureParen0', 'lightgravel', '', 'none')
 call s:HL('clojureAnonArg', 'snow', '', 'bold')
 
 " }}}
+" Common Lisp {{{
+
+call s:HL('lispFunc',           'lime', '', 'none')
+call s:HL('lispVar',            'orange', '', 'bold')
+call s:HL('lispEscapeSpecial',  'orange', '', 'none')
+
+" }}}
 " CSS {{{
 
 if g:badwolf_css_props_highlight
