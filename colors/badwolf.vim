@@ -453,11 +453,11 @@ call s:HL('lispEscapeSpecial',  'orange', '', 'none')
 " CSS {{{
 
 if g:badwolf_css_props_highlight
-    call s:HL('cssColorProp', 'dirtyblonde', '', 'none')
-    call s:HL('cssBoxProp', 'dirtyblonde', '', 'none')
-    call s:HL('cssTextProp', 'dirtyblonde', '', 'none')
-    call s:HL('cssRenderProp', 'dirtyblonde', '', 'none')
-    call s:HL('cssGeneratedContentProp', 'dirtyblonde', '', 'none')
+    call s:HL('cssColorProp', 'taffy', '', 'none')
+    call s:HL('cssBoxProp', 'taffy', '', 'none')
+    call s:HL('cssTextProp', 'taffy', '', 'none')
+    call s:HL('cssRenderProp', 'taffy', '', 'none')
+    call s:HL('cssGeneratedContentProp', 'taffy', '', 'none')
 else
     call s:HL('cssColorProp', 'fg', '', 'none')
     call s:HL('cssBoxProp', 'fg', '', 'none')
