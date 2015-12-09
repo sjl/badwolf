@@ -89,6 +89,12 @@ let s:bwc.taffy = ['ff2c4b', 196]
 let s:bwc.saltwatertaffy = ['8cffba', 121]
 
 " The star of the show comes straight from Made of Code.
+"
+" You should almost never use this.  It should be used for things that denote
+" 'where the user is', which basically consists of:
+"
+" * The cursor
+" * A REPL prompt
 let s:bwc.tardis = ['0a9dff', 39]
 
 " This one's from Mustang, not Florida!
@@ -563,6 +569,13 @@ call s:HL('lessVariable', 'lime', '', 'none')
 
 call s:HL('lispyscriptDefMacro', 'lime', '', '')
 call s:HL('lispyscriptRepeat', 'dress', '', 'none')
+
+" }}}
+" REPLs {{{
+" This isn't a specific plugin, but just useful highlight classes for anything
+" that might want to use them.
+
+call s:HL('replPrompt', 'tardis', '', 'bold')
 
 " }}}
 " Mail {{{
