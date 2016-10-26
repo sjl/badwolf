@@ -533,6 +533,28 @@ call s:HL('javaDocTags', 'snow', '', 'none')
 call s:HL('javaDocParam', 'dalespale', '', '')
 
 " }}}
+" Javascript {{{
+
+" Imports && Exports
+call s:HL('jsModuleGroup', 'snow', '', 'none')
+call s:HL('jsImportContainer', 'brightgravel', '', 'none')
+call s:HL('jsExportContainer', 'brightgravel', '', 'none')
+
+" Template strings
+call s:HL('jsTemplateString', 'orange', '', 'none')
+call s:HL('jsTemplateVar', 'saltwatertaffy', '', 'none')
+
+" Objects
+call s:HL('jsObjectKey', 'dalespale', '', 'none')
+
+" Keywords
+call s:HL('jsThis', 'taffy', '', 'none')
+call s:HL('jsSuper', 'taffy', '', 'none')
+
+" Functions
+call s:HL('jsFuncArgs', 'saltwatertaffy', '', 'none')
+
+" }}}
 " LaTeX {{{
 
 call s:HL('texStatement', 'tardis', '', 'none')
