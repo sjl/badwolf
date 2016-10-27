@@ -541,11 +541,12 @@ call s:HL('jsImportContainer', 'brightgravel', '', 'none')
 call s:HL('jsExportContainer', 'brightgravel', '', 'none')
 
 " Template strings
-call s:HL('jsTemplateString', 'orange', '', 'none')
+call s:HL('jsTemplateString', 'coffee', '', 'none')
 call s:HL('jsTemplateVar', 'saltwatertaffy', '', 'none')
 
 " Objects
-call s:HL('jsObjectKey', 'dalespale', '', 'none')
+call s:HL('jsObjectKey', 'brightgravel', '', 'none')
+call s:HL('jsObjectValue', 'brightgravel', '', 'none')
 
 " Keywords
 call s:HL('jsThis', 'taffy', '', 'none')
