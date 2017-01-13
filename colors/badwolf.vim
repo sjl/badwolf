@@ -210,14 +210,14 @@ call s:HL('IncSearch', 'coal', 'tardis',    'bold')
 
 call s:HL('Underlined', 'fg', '', 'underline')
 
-call s:HL('StatusLine',   'coal', 'tardis',     'bold')
-call s:HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
+call s:HL('StatusLine',   'lime', 'darkgravel',     'bold')
+call s:HL('StatusLineNC', 'snow', 'darkgravel', 'bold')
 
 call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
 call s:HL('Title', 'lime')
 
-call s:HL('ErrorMsg',   'taffy',       'bg', 'bold')
+call s:HL('ErrorMsg',   'taffy',       '', 'bold')
 call s:HL('MoreMsg',    'dalespale',   '',   'bold')
 call s:HL('ModeMsg',    'dirtyblonde', '',   'bold')
 call s:HL('Question',   'dirtyblonde', '',   'bold')
@@ -232,7 +232,7 @@ call s:HL('Tag', '', '', 'bold')
 " }}}
 " Gutter {{{
 
-call s:HL('LineNr',     'mediumgravel', s:gutter)
+call s:HL('LineNr',     'brightgravel', 'darkgravel')
 call s:HL('SignColumn', '',             s:gutter)
 call s:HL('FoldColumn', 'mediumgravel', s:gutter)
 
@@ -316,9 +316,9 @@ call s:HL('PmenuThumb', 'brightgravel')
 " }}}
 " Diffs {{{
 
-call s:HL('DiffDelete', 'coal', 'coal')
-call s:HL('DiffAdd',    '',     'deepergravel')
-call s:HL('DiffChange', '',     'darkgravel')
+call s:HL('DiffDelete', 'coal', 'taffy')
+call s:HL('DiffAdd',    'coal',     'lime')
+call s:HL('DiffChange', 'coal',     'orange')
 call s:HL('DiffText',   'snow', 'deepergravel', 'bold')
 
 " }}}
