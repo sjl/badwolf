@@ -185,7 +185,7 @@ endif
 
 call s:HL('Normal', 'plain', 'blackgravel')
 
-call s:HL('Folded', 'mediumgravel', 'bg', 'none')
+call s:HL('Folded', 'darkroast', 'bg', 'none')
 
 call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
 
@@ -531,6 +531,29 @@ call s:HL('javaScopeDecl', 'taffy', '', 'bold')
 call s:HL('javaCommentTitle', 'gravel', '')
 call s:HL('javaDocTags', 'snow', '', 'none')
 call s:HL('javaDocParam', 'dalespale', '', '')
+
+" }}}
+" Javascript {{{
+
+" Imports && Exports
+call s:HL('jsModuleGroup', 'snow', '', 'none')
+call s:HL('jsImportContainer', 'brightgravel', '', 'none')
+call s:HL('jsExportContainer', 'brightgravel', '', 'none')
+
+" Template strings
+call s:HL('jsTemplateString', 'coffee', '', 'none')
+call s:HL('jsTemplateVar', 'saltwatertaffy', '', 'none')
+
+" Objects
+call s:HL('jsObjectKey', 'brightgravel', '', 'none')
+call s:HL('jsObjectValue', 'brightgravel', '', 'none')
+
+" Keywords
+call s:HL('jsThis', 'taffy', '', 'none')
+call s:HL('jsSuper', 'taffy', '', 'none')
+
+" Functions
+call s:HL('jsFuncArgs', 'saltwatertaffy', '', 'none')
 
 " }}}
 " LaTeX {{{
