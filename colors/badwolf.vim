@@ -232,7 +232,7 @@ call s:HL('Tag', '', '', 'bold')
 " }}}
 " Gutter {{{
 
-call s:HL('LineNr',     'mediumgravel', s:gutter)
+call s:HL('LineNr',     'mediumgravel')
 call s:HL('SignColumn', '',             s:gutter)
 call s:HL('FoldColumn', 'mediumgravel', s:gutter)
 

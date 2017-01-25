@@ -207,7 +207,7 @@ call s:HL('Tag', '', '', 'bold')
 " }}}
 " Gutter {{{
 
-call s:HL('LineNr',     'mediumgravel', s:gutter)
+call s:HL('LineNr',     'mediumgravel')
 call s:HL('SignColumn', '',             s:gutter)
 call s:HL('FoldColumn', 'mediumgravel', s:gutter)
 
@@ -225,7 +225,7 @@ call s:HL('iCursor', 'coal', 'tardis', 'none')
 call s:HL('Special', 'plain')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
-call s:HL('Comment',        'gravel', 'bg', 'none')
+call s:HL('Comment',        'gravel')
 call s:HL('Todo',           'snow',   'bg', 'bold')
 call s:HL('SpecialComment', 'snow',   'bg', 'bold')
 
