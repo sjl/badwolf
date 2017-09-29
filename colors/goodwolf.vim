@@ -512,6 +512,14 @@ call GoodWolfHL('pythonRun',         'plain', '', 'none')
 call GoodWolfHL('pythonCoding',      'plain', '', 'bold')
 
 " }}}
+" Scala {{{
+
+call GoodWolfHL('scalaParameterAnnotation', 'gravel', '', 'bold')
+call GoodWolfHL('scalaParamAnnotationValue', 'gravel', '', 'bold')
+call GoodWolfHL('scalaCommentAnnotation', 'gravel', '', 'bold')
+call GoodWolfHL('scalaDocLinks', 'gravel', '', 'bold')
+
+" }}}
 " Vim {{{
 
 call GoodWolfHL('helpHyperTextJump', 'dress', '', 'none')
