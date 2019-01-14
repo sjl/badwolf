@@ -360,6 +360,15 @@ call GoodWolfHL('InterestingWord6', 'coal', 'taffy')
 call GoodWolfHL('level1c',  'mediumgravel', '', 'bold')
 
 " }}}
+" Fugitive {{{
+
+call GoodWolfHL('fugitiveHeading', 'dress', 'bg', 'bold')
+call GoodWolfHL('fugitiveHeader', 'dress', 'bg', 'bold')
+call GoodWolfHL('fugitiveCount', 'plain', 'bg', 'bold')
+call GoodWolfHL('fugitiveSymbolicRef', 'dirtyblonde', 'bg', 'none')
+call GoodWolfHL('fugitiveModifier', 'dirtyblonde', 'bg', 'bold')
+
+" }}}
 
 " }}}
 " Filetype-specific {{{
