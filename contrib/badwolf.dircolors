@@ -57,6 +57,7 @@ TERM screen-w
 TERM screen.Eterm
 TERM screen.rxvt
 TERM screen.linux
+TERM st-256color
 TERM terminator
 TERM vt100
 TERM xterm
@@ -216,3 +217,12 @@ EXEC 1;38;5;154
 .oga 0;38;5;214
 .spx 0;38;5;214
 .xspf 0;38;5;214
+
+# build system scripts
+.do 00;35
+*Makefile 00;35
+
+# cached/compiled files
+.o 00;30;1
+.pyc 00;30;1
+.fasl 00;30;1
