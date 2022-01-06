@@ -1,0 +1,30 @@
+let s:darkgravel = [ '#242321', 235 ]
+let s:deepgravel = [ '#45413b', 233 ]
+let s:snow = [ '#ffffff', 242 ]
+let s:tardis = [ '#25b0bc', 37 ]
+let s:saltwatertaffy = [ '#8cffba', 48 ]
+let s:dress = [ '#ff9eb8', 171 ]
+let s:taffy = [ '#ff2c4b', 203 ]
+let s:dirtyblone = [ '#f4cf86', 150 ]
+let s:toffee = [ '#b88853', 209 ]
+
+let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+let s:p.normal.left = [ [ s:darkgravel, s:toffee ], [ s:taffy, s:deepgravel ] ]
+let s:p.normal.right = [ [ s:darkgravel, s:toffee ], [ s:darkgravel, s:dirtyblone ] ]
+let s:p.inactive.right = [ [ s:darkgravel, s:deepgravel ], [ s:snow, s:darkgravel ] ]
+let s:p.inactive.left =  [ [ s:tardis, s:darkgravel ], [ s:snow, s:darkgravel ] ]
+let s:p.insert.left = [ [ s:darkgravel, s:dress ], [ s:saltwatertaffy, s:deepgravel ] ]
+let s:p.insert.right = [ [ s:darkgravel, s:dress ], [ s:darkgravel, s:dirtyblone ] ]
+let s:p.replace.left = [ [ s:darkgravel, s:taffy ], [ s:tardis, s:deepgravel ] ]
+let s:p.visual.left = [ [ s:darkgravel, s:tardis ], [ s:dress, s:deepgravel ] ]
+let s:p.visual.right = [ [ s:darkgravel, s:tardis ], [ s:darkgravel, s:dirtyblone ] ]
+let s:p.normal.middle = [ [ s:snow, s:deepgravel ] ]
+let s:p.inactive.middle = [ [ s:snow, s:deepgravel ] ]
+let s:p.tabline.left = [ [ s:saltwatertaffy, s:deepgravel ] ]
+let s:p.tabline.tabsel = [ [ s:tardis, s:darkgravel ] ]
+let s:p.tabline.middle = [ [ s:dirtyblone, s:deepgravel ] ]
+let s:p.tabline.right = copy(s:p.normal.right)
+let s:p.normal.error = [ [ s:taffy, s:darkgravel ] ]
+let s:p.normal.warning = [ [ s:dirtyblone, s:darkgravel ] ]
+
+let g:lightline#colorscheme#badwolf#palette = lightline#colorscheme#flatten(s:p)
