@@ -433,6 +433,17 @@ call GoodWolfHL('javaDocTags', 'snow', '', 'none')
 call GoodWolfHL('javaDocParam', 'plain', '', '')
 
 " }}}
+" Jinja {{{
+
+call GoodWolfHL('jinjaVarBlock', 'dirtyblonde', '', 'bold')
+call GoodWolfHL('jinjaVariable', 'dirtyblonde', '', 'bold')
+call GoodWolfHL('jinjaTagBlock', 'toffee', '', 'bold')
+call GoodWolfHL('jinjaStatement', 'toffee', '', 'bold')
+call GoodWolfHL('jinjaOperator', 'snow', '', 'none')
+call GoodWolfHL('jinjaFilter', 'dress', '', 'none')
+call GoodWolfHL('jinjaString', 'coffee', '', 'bold')
+
+" }}}
 " LaTeX {{{
 
 call GoodWolfHL('texStatement', 'dress', '', 'none')
