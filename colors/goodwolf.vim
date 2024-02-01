@@ -266,6 +266,18 @@ call GoodWolfHL('Error',  'snow',   'taffy', 'bold')
 call GoodWolfHL('Debug',  'snow',   '',      'bold')
 call GoodWolfHL('Ignore', 'gravel', '',      '')
 
+let g:goodwolf_string_style = 'bold'
+
+function GoodWolfToggleBoldStrings()
+    if g:goodwolf_string_style == 'bold'
+        let g:goodwolf_string_style = 'none'
+    else
+        let g:goodwolf_string_style = 'bold'
+    endif
+
+    call GoodWolfHL('String', 'lightgravel', '', g:goodwolf_string_style)
+endfunction
+
 " }}}
 " Completion Menu {{{
 
