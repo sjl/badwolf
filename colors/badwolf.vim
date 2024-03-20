@@ -83,7 +83,7 @@ let s:bwc.dalespale = ['fade3e', 221]
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
 " Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = ['ff2c4b', 196]
+let s:bwc.taffy = ['ff2c4b', 197]
 
 " Another chewy accent, but use sparingly!
 let s:bwc.saltwatertaffy = ['8cffba', 121]
@@ -98,10 +98,10 @@ let s:bwc.saltwatertaffy = ['8cffba', 121]
 let s:bwc.tardis = ['0a9dff', 39]
 
 " This one's from Mustang, not Florida!
-let s:bwc.orange = ['ffa724', 214]
+let s:bwc.orange = ['ffa724', 208]
 
 " A limier green from Getafe.
-let s:bwc.lime = ['aeee00', 154]
+let s:bwc.lime = ['aeee00', 191]
 
 " Rose's dress in The Idiot's Lantern.
 let s:bwc.dress = ['ff9eb8', 211]
