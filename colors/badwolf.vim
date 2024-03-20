@@ -212,6 +212,8 @@ call s:HL('Underlined', 'fg', '', 'underline')
 
 call s:HL('StatusLine',   'coal', 'tardis',     'bold')
 call s:HL('StatusLineNC', 'snow', 'deepgravel', 'bold')
+call s:HL('StatusLineTerm',   'coal', 'tardis',     'bold')
+call s:HL('StatusLineTermNC', 'snow', 'deepgravel', 'bold')
 
 call s:HL('Directory', 'dirtyblonde', '', 'bold')
 
