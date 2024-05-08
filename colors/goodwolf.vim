@@ -438,6 +438,15 @@ else
 endif
 
 " }}}
+" HTML/Django {{{
+
+" Punctuation
+call GoodWolfHL('djangoTagBlock',  'coffee', 'bg', 'bold')
+call GoodWolfHL('djangoStatement', 'orange', 'bg', 'none')
+call GoodWolfHL('djangoArgument',  'dress', 'bg', 'none')
+call GoodWolfHL('djangoVarBlock',  'lime', 'bg', 'none')
+
+" }}}
 " Java {{{
 
 call GoodWolfHL('javaCommentTitle', 'gravel', '')
