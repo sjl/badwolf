@@ -440,11 +440,17 @@ endif
 " }}}
 " HTML/Django {{{
 
-" Punctuation
 call GoodWolfHL('djangoTagBlock',  'coffee', 'bg', 'bold')
 call GoodWolfHL('djangoStatement', 'orange', 'bg', 'none')
 call GoodWolfHL('djangoArgument',  'dress', 'bg', 'none')
 call GoodWolfHL('djangoVarBlock',  'lime', 'bg', 'none')
+
+" }}}
+" HTML/TEN {{{
+
+call GoodWolfHL('tenTagBlock',  'orange', 'bg', 'bold')
+call GoodWolfHL('tenArgument',  'lime', 'bg', 'none')
+call GoodWolfHL('tenVarBlock',  'dress', 'bg', 'none')
 
 " }}}
 " Java {{{
@@ -571,6 +577,13 @@ call GoodWolfHL('scalaParameterAnnotation', 'gravel', '', 'bold')
 call GoodWolfHL('scalaParamAnnotationValue', 'gravel', '', 'bold')
 call GoodWolfHL('scalaCommentAnnotation', 'gravel', '', 'bold')
 call GoodWolfHL('scalaDocLinks', 'gravel', '', 'bold')
+
+" }}}
+" Singularity {{{
+
+call GoodWolfHL('singularitySectionLine', 'taffy', '', 'bold')
+call GoodWolfHL('singularitySection', 'taffy', '', 'bold')
+call GoodWolfHL('singularityKeyword', 'dress', '', '')
 
 " }}}
 " Vim {{{
