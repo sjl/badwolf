@@ -50,6 +50,26 @@ darker than the normal background, or the same.
 
 Default: `0` (off, gutters are the same as the background)
 
+### g:badwolf\_folded
+
+Determines how light to render the background of folded linese.
+
+Can be set to `0`, `1`, `2`, or `3`.
+
+    " Make folded lines darker than the background.
+    let g:badwolf_folded = 0
+
+    " Make folded lines the same color as the background.
+    let g:badwolf_folded = 1
+
+    " Make folded lines lighter than the background.
+    let g:badwolf_folded = 2
+
+    " Make folded lines much lighter than the background.
+    let g:badwolf_folded = 3
+
+Default: `1` (same color as the background)
+
 ### g:badwolf\_tabline
 
 Determines how light to render the background of the tab line (the line at the

@@ -160,6 +160,22 @@ else
     let s:gutter = 'blackgravel'
 endif
 
+if exists('g:badwolf_folded')
+    if g:badwolf_folded == 0
+        let s:folded = 'blackestgravel'
+    elseif  g:badwolf_folded == 1
+        let s:folded = 'blackgravel'
+    elseif  g:badwolf_folded == 2
+        let s:folded = 'darkgravel'
+    elseif  g:badwolf_folded == 3
+        let s:folded = 'deepgravel'
+    else
+        let s:folded = 'blackestgravel'
+    endif
+else
+    let s:folded = 'blackgravel'
+endif
+
 if exists('g:badwolf_tabline')
     if g:badwolf_tabline == 0
         let s:tabline = 'blackestgravel'
@@ -185,7 +201,7 @@ endif
 
 call s:HL('Normal', 'plain', 'blackgravel')
 
-call s:HL('Folded', 'mediumgravel', 'bg', 'none')
+call s:HL('Folded', 'mediumgravel', s:folded, 'none')
 
 call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
 
