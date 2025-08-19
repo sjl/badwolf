@@ -641,6 +641,9 @@ call s:HL('pythonRun',         'gravel', '', 'bold')
 call s:HL('pythonCoding',      'gravel', '', 'bold')
 
 " }}}
+" GO {{{
+call s:HL('goDirective', 'lime', '', 'none')
+" }}}
 " SLIMV {{{
 
 " Rainbow parentheses
